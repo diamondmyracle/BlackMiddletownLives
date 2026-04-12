@@ -6,6 +6,42 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  const popupStyles = document.createElement('style');
+  popupStyles.textContent = `
+    .route-popup {
+      font-family: Georgia, serif;
+      max-width: 210px;
+    }
+
+    .route-popup__title {
+      font-size: 1rem;
+    }
+
+    .route-popup__title--brown {
+      color: #3b1f0a;
+    }
+
+    .route-popup__body {
+      margin: 0.4rem 0 0.6rem;
+      font-size: 0.88rem;
+      color: #4a3010;
+    }
+
+    .route-popup__link {
+      display: inline-block;
+      color: #f5ead8;
+      padding: 0.3rem 0.8rem;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 0.83rem;
+    }
+
+    .route-popup__link--brown {
+      background: #3b1f0a;
+    }
+  `;
+  document.head.appendChild(popupStyles);
+
   /* ---------- Initialise map centred on the east coast ---------- */
   const map = L.map('map', {
     center: [42.0, -76.5],
@@ -69,16 +105,13 @@ document.addEventListener('DOMContentLoaded', function () {
   L.marker([37.5407, -77.4360], { icon: iconSouth })
     .addTo(map)
     .bindPopup(`
-      <div style="font-family:Georgia,serif; max-width:210px;">
-        <strong style="color:#3b1f0a; font-size:1rem;">🔴 The South: Origins of Resistance</strong>
-        <p style="margin:0.4rem 0 0.6rem; font-size:0.88rem; color:#4a3010;">
+      <div class="route-popup">
+        <strong class="route-popup__title route-popup__title--brown">🔴 The South: Origins of Resistance</strong>
+        <p class="route-popup__body">
           Enslaved people throughout the Upper South risked everything for freedom,
           forming the first links in a secret network stretching to Canada.
         </p>
-        <a href="south.html"
-           style="display:inline-block; background:#3b1f0a; color:#f5ead8;
-                  padding:0.3rem 0.8rem; border-radius:3px; text-decoration:none;
-                  font-size:0.83rem;">
+        <a href="south.html" class="route-popup__link route-popup__link--brown">
           Explore ›
         </a>
       </div>
@@ -88,17 +121,14 @@ document.addEventListener('DOMContentLoaded', function () {
   L.marker([41.5623, -72.6506], { icon: iconMiddle })
     .addTo(map)
     .bindPopup(`
-      <div style="font-family:Georgia,serif; max-width:210px;">
-        <strong style="color:#3b1f0a; font-size:1rem;">⭐ Middletown, CT — The Way Station</strong>
-        <p style="margin:0.4rem 0 0.6rem; font-size:0.88rem; color:#4a3010;">
+      <div class="route-popup">
+        <strong class="route-popup__title route-popup__title--brown">⭐ Middletown, CT — The Way Station</strong>
+        <p class="route-popup__body">
           A vital stop on the Underground Railroad. Explore how Middletown's
           Black churches, families, and abolitionists sheltered and guided
           freedom seekers northward.
         </p>
-        <a href="middletown.html"
-           style="display:inline-block; background:#3b1f0a; color:#f5ead8;
-                  padding:0.3rem 0.8rem; border-radius:3px; text-decoration:none;
-                  font-size:0.83rem;">
+        <a href="middletown.html" class="route-popup__link route-popup__link--brown">
           Explore ›
         </a>
       </div>
