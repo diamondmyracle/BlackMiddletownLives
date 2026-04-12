@@ -1,0 +1,395 @@
+/* ============================================================
+   Black Middletown Lives – Shared Stylesheet
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brown-dark:   #3b1f0a;
+  --brown-mid:    #6b3a1f;
+  --brown-light:  #c49a6c;
+  --cream:        #f5ead8;
+  --cream-dark:   #e8d5b7;
+  --gold:         #b8860b;
+  --gold-light:   #d4a843;
+  --text-dark:    #1a0f00;
+  --text-mid:     #4a3010;
+  --white:        #fffdf7;
+  --shadow:       rgba(59, 31, 10, 0.25);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  background-color: var(--brown-dark);
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+nav .site-title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--gold-light);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+nav ul a:hover,
+nav ul a.active {
+  color: var(--gold-light);
+}
+
+/* ---------- Hero / Page Header ---------- */
+.hero {
+  background-color: var(--brown-dark);
+  color: var(--cream);
+  text-align: center;
+  padding: 3.5rem 2rem 2.5rem;
+  border-bottom: 4px solid var(--gold);
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero p.subtitle {
+  font-size: 1.1rem;
+  color: var(--cream-dark);
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* ---------- Map Section (Homepage) ---------- */
+#map-section {
+  padding: 2rem 2rem 1rem;
+  background-color: var(--cream-dark);
+  border-bottom: 3px solid var(--brown-light);
+}
+
+#map-section h2 {
+  text-align: center;
+  color: var(--brown-dark);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+#map-section .map-instructions {
+  text-align: center;
+  color: var(--text-mid);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+#map {
+  width: 100%;
+  height: 560px;
+  border: 3px solid var(--brown-mid);
+  border-radius: 4px;
+  box-shadow: 0 4px 18px var(--shadow);
+}
+
+/* ---------- Intro Blurb (Homepage) ---------- */
+#intro {
+  max-width: 860px;
+  margin: 2.5rem auto;
+  padding: 0 2rem;
+}
+
+#intro h2 {
+  color: var(--brown-dark);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.35rem;
+}
+
+#intro p {
+  margin-bottom: 1rem;
+  color: var(--text-mid);
+}
+
+/* ---------- Three‑Card Row (Homepage) ---------- */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.card {
+  background-color: var(--white);
+  border: 2px solid var(--brown-light);
+  border-top: 5px solid var(--gold);
+  border-radius: 4px;
+  padding: 1.5rem 1.75rem;
+  flex: 1 1 280px;
+  max-width: 340px;
+  box-shadow: 0 3px 12px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 7px 22px var(--shadow);
+}
+
+.card h3 {
+  color: var(--brown-dark);
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.93rem;
+  color: var(--text-mid);
+  margin-bottom: 1rem;
+}
+
+.card a.btn {
+  display: inline-block;
+  background-color: var(--brown-dark);
+  color: var(--cream);
+  padding: 0.45rem 1.1rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s;
+}
+
+.card a.btn:hover {
+  background-color: var(--gold);
+  color: var(--brown-dark);
+}
+
+/* ---------- Content Pages ---------- */
+.page-content {
+  max-width: 880px;
+  margin: 2.5rem auto 4rem;
+  padding: 0 2rem;
+}
+
+.page-content h2 {
+  color: var(--brown-dark);
+  font-size: 1.55rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.65rem;
+  border-left: 5px solid var(--gold);
+  padding-left: 0.75rem;
+}
+
+.page-content h3 {
+  color: var(--brown-mid);
+  font-size: 1.2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-content p {
+  margin-bottom: 1.1rem;
+  color: var(--text-mid);
+}
+
+.page-content ul,
+.page-content ol {
+  margin: 0.5rem 0 1.2rem 1.5rem;
+  color: var(--text-mid);
+}
+
+.page-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Pull Quote ---------- */
+blockquote.pull-quote {
+  border-left: 5px solid var(--gold);
+  background-color: var(--white);
+  padding: 1.1rem 1.5rem;
+  margin: 1.8rem 0;
+  font-style: italic;
+  color: var(--brown-dark);
+  font-size: 1.05rem;
+  box-shadow: 2px 2px 10px var(--shadow);
+  border-radius: 0 4px 4px 0;
+}
+
+blockquote.pull-quote cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  font-style: normal;
+}
+
+/* ---------- Highlight Box ---------- */
+.highlight-box {
+  background-color: var(--brown-dark);
+  color: var(--cream);
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+}
+
+.highlight-box h3 {
+  color: var(--gold-light);
+  margin-bottom: 0.6rem;
+}
+
+.highlight-box p,
+.highlight-box li {
+  color: var(--cream-dark);
+  font-size: 0.95rem;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  border-left: 3px solid var(--gold);
+  margin: 2rem 0 2rem 1rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.97rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  background-color: var(--gold);
+  border-radius: 50%;
+  border: 2px solid var(--brown-dark);
+}
+
+.timeline-item .year {
+  font-weight: bold;
+  color: var(--brown-dark);
+  font-size: 1rem;
+}
+
+.timeline-item p {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+}
+
+/* ---------- Navigation Arrows (bottom of content pages) ---------- */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--brown-light);
+}
+
+.page-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--brown-dark);
+  color: var(--cream);
+  padding: 0.6rem 1.2rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.93rem;
+  transition: background-color 0.2s;
+}
+
+.page-nav a:hover {
+  background-color: var(--gold);
+  color: var(--brown-dark);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--brown-dark);
+  color: var(--cream-dark);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.85rem;
+  border-top: 3px solid var(--gold);
+}
+
+footer a {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #map {
+    height: 380px;
+  }
+  .card {
+    max-width: 100%;
+  }
+}
