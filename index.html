@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Middletown Lives — Underground Railroad</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <a class="site-title" href="index.html">Black Middletown Lives</a>
+    <ul>
+      <li><a href="index.html" class="active">Home &amp; Map</a></li>
+      <li><a href="south.html">Southern Origins</a></li>
+      <li><a href="middletown.html">Middletown, CT</a></li>
+      <li><a href="canada.html">Freedom in Canada</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <h1>Black Middletown Lives</h1>
+    <p class="subtitle">
+      Tracing the Underground Railroad through Middletown, Connecticut —
+      a study in Black resistance, faith, and freedom.
+    </p>
+  </header>
+
+  <!-- ===== Interactive Map ===== -->
+  <section id="map-section">
+    <h2>The Underground Railroad — East Coast Route</h2>
+    <p class="map-instructions">
+      Click a marker on the map to learn about each stop along the journey to freedom.
+    </p>
+    <div id="map"></div>
+  </section>
+
+  <!-- ===== Project Introduction ===== -->
+  <section id="intro">
+    <h2>About This Project</h2>
+    <p>
+      This digital project examines Middletown, Connecticut's role in the Underground Railroad
+      as a focal point for Black community life, abolitionist activism, and the movement of
+      freedom seekers northward toward Canada. Drawing on scholarship in African American
+      history, religious history, and the geography of resistance, the site traces how
+      Middletown functioned as a crucial "way station" on one of the most daring collective
+      acts of resistance in American history.
+    </p>
+    <p>
+      The three sections of this site move along the railroad's route: from the enslaved
+      communities of the Upper South where the journey began, northward through Middletown's
+      vibrant free Black community, and finally to the Black settlements in Canada where
+      freedom became permanent.
+    </p>
+    <p>
+      <em>
+        Navigate using the map markers above or the cards below. You can also use the
+        navigation bar at the top of every page.
+      </em>
+    </p>
+  </section>
+
+  <!-- ===== Three‑Card Row ===== -->
+  <div class="card-row">
+
+    <div class="card">
+      <h3>🔴 Southern Origins</h3>
+      <p>
+        Understand who freedom seekers were, the conditions they fled, and how
+        Black families and allies began building the networks of the Underground Railroad
+        in the Upper South.
+      </p>
+      <a href="south.html" class="btn">Explore →</a>
+    </div>
+
+    <div class="card">
+      <h3>⭐ Middletown, Connecticut</h3>
+      <p>
+        The heart of this project. Discover how Middletown's Black churches, the
+        Beman family, and abolitionist networks made the city a vital sanctuary
+        and way station on the path to freedom.
+      </p>
+      <a href="middletown.html" class="btn">Explore →</a>
+    </div>
+
+    <div class="card">
+      <h3>🟢 Freedom in Canada</h3>
+      <p>
+        Trace the final leg of the journey: how freedom seekers crossed into
+        Canada, built thriving Black communities, and what their arrival meant
+        for the meaning of liberty.
+      </p>
+      <a href="canada.html" class="btn">Explore →</a>
+    </div>
+
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>
+      Black Middletown Lives &mdash; Final Project &bull;
+      Primary sources drawn from Strother, LaRoche, and Donohue &amp; Bayers.
+    </p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLs=" crossorigin=""></script>
+
+  <!-- Map initialisation -->
+  <script src="js/map.js"></script>
+
+</body>
+</html>
