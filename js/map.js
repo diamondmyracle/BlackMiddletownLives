@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     [41.5623,  -72.6506],   // Middletown, CT  ★
     [41.7658,  -72.6851],   // Hartford, CT
     [42.1015,  -72.5898],   // Springfield, MA
-    [42.9634,  -76.0120],   // Syracuse, NY  (Westernroute variant)
+    [42.9634,  -76.0120],   // Syracuse, NY  (Western route variant)
     [43.4643,  -79.6868]    // Hamilton, Ontario, Canada  (end point)
   ];
 
