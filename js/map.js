@@ -56,20 +56,24 @@ document.addEventListener('DOMContentLoaded', function () {
   }).addTo(map);
 
   /* ---------- Route waypoints (south → north) ---------- */
-  const routeCoords = [
-    [37.5407,  -77.4360],   // Richmond, VA  (start point in the South)
-    [38.9072,  -77.0369],   // Washington D.C.
-    [39.2904,  -76.6122],   // Baltimore, MD
-    [39.7447,  -75.5484],   // Wilmington, DE
-    [39.9526,  -75.1652],   // Philadelphia, PA
-    [40.7128,  -74.0060],   // New York City
-    [41.0534,  -73.5387],   // Greenwich / Stamford, CT
-    [41.5623,  -72.6506],   // Middletown, CT  ★
-    [41.7658,  -72.6851],   // Hartford, CT
-    [42.1015,  -72.5898],   // Springfield, MA
-    [42.9634,  -76.0120],   // Syracuse, NY  (Western route variant)
-    [43.4643,  -79.6868]    // Hamilton, Ontario, Canada  (end point)
+  const routePoints = [
+    { id: 'south',  label: 'Richmond, VA',                  lat: 37.5407, lng: -77.4360 }, // start point in the South
+    { label: 'Washington D.C.',                             lat: 38.9072, lng: -77.0369 },
+    { label: 'Baltimore, MD',                               lat: 39.2904, lng: -76.6122 },
+    { label: 'Wilmington, DE',                              lat: 39.7447, lng: -75.5484 },
+    { label: 'Philadelphia, PA',                            lat: 39.9526, lng: -75.1652 },
+    { label: 'New York City',                               lat: 40.7128, lng: -74.0060 },
+    { label: 'Greenwich / Stamford, CT',                    lat: 41.0534, lng: -73.5387 },
+    { id: 'middle', label: 'Middletown, CT',                lat: 41.5623, lng: -72.6506 }, // ★
+    { label: 'Hartford, CT',                                lat: 41.7658, lng: -72.6851 },
+    { label: 'Springfield, MA',                             lat: 42.1015, lng: -72.5898 },
+    { label: 'Syracuse, NY',                                lat: 42.9634, lng: -76.0120 }, // Western route variant
+    { id: 'canada', label: 'Hamilton, Ontario, Canada',     lat: 43.4643, lng: -79.6868 }  // end point
   ];
+
+  const routeCoords = routePoints.map(function (point) {
+    return [point.lat, point.lng];
+  });
 
   /* Draw the route as a dashed polyline */
   L.polyline(routeCoords, {
