@@ -135,7 +135,7 @@ nav ul a.active {
 
 #map {
   width: 100%;
-  height: 560px;
+  height: 600px;
   border: 3px solid var(--brown-mid);
   border-radius: 4px;
   box-shadow: 0 4px 18px var(--shadow);
@@ -380,6 +380,83 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.image-block {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.image-block img {
+  max-width: 100%;
+  width: 360px;
+  border: 3px solid var(--brown-mid);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.wide-image img {
+  width: 480px;
+}
+
+.image-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.image-item {
+  text-align: center;
+  max-width: 280px;
+}
+
+.image-item img {
+  width: 260px;
+  max-width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border: 3px solid var(--brown-mid);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.three-images .image-item:nth-child(3) img {
+  width: 320px;
+  object-fit: cover;
+}
+
+.caption {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.source-highlight {
+  background-color: #fff3d6;
+  border-left: 6px solid var(--brown-dark);
+  padding: 1.25rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.source-highlight h3 {
+  margin-top: 0;
+  color: var(--brown-dark);
+}
+
+.source-quote {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.source-citation {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   nav {
@@ -393,3 +470,4 @@ footer a:hover {
     max-width: 100%;
   }
 }
+
