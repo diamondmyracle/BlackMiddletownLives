@@ -31,3 +31,5 @@ A multi-page website examining Middletown, CT's role in the Underground Railroad
 
 Open `index.html` in any modern web browser. An internet connection is required for the Leaflet map tiles and library to load.
 
+NOW: www.undergroundmiddletown.com
+
